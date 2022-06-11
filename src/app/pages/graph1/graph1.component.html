@@ -1,1 +1,24 @@
-<p>grafic1 works!</p>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+
+        <graph [chartData]="doughnutChartData1"
+               [title]="'Grafica'">
+        </graph>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+
+        <graph  [chartData]="doughnutChartData2"
+                [title]="'Grafica 2'">
+        </graph>
+
+      </div>
+    </div>
+  </div>
+</div>

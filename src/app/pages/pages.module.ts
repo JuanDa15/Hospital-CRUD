@@ -7,7 +7,8 @@ import { PagesComponent } from './pages/pages.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { BrowserModule } from '@angular/platform-browser';
     CommonModule,
     SharedModule,
     BrowserModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }

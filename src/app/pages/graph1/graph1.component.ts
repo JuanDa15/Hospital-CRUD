@@ -1,16 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ChartData, ChartDataset, ChartEvent, ChartType } from 'chart.js';
 
 @Component({
-  selector: 'app-grafic1',
+  selector: 'grafic1',
   templateUrl: './graph1.component.html',
   styles: [
   ]
 })
-export class Graph1Component implements OnInit {
+export class Graph1Component {
+  public doughnutChartLabels1: string[] = [ 'Carros', 'Motos', 'Aviones' ];
 
-  constructor() { }
+  public doughnutChartData1: ChartData<'doughnut'> = {
+    labels: this.doughnutChartLabels1,
+    datasets: [
+      { data: [ 350, 450, 100 ] },
+      { data: [ 50, 150, 120 ] },
+      { data: [ 250, 130, 70 ] }
+    ]
+  };
 
-  ngOnInit(): void {
-  }
 
+  public doughnutChartLabels2: string[] = [ 'Amarillo', 'Negro', 'Blanco' ];
+  public doughnutChartData2: ChartData<'doughnut'> = {
+    labels: this.doughnutChartLabels2,
+    datasets: [
+      { data: [ 350, 450, 100 ] },
+      { data: [ 50, 150, 120 ] },
+      { data: [ 250, 130, 70 ] }
+    ]
+  };
 }
